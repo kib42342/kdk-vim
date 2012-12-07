@@ -104,3 +104,9 @@
 [submodule "bundle/vim-indent-object"]
 	path = bundle/vim-indent-object
 	url = git://github.com/michaeljsmith/vim-indent-object.git
+[submodule "bundle/phpcomplete"]
+	path = bundle/phpcomplete
+	url = https://github.com/shawncplus/phpcomplete.vim.git
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
