@@ -14,8 +14,11 @@ call pathogen#helptags()
 
 " hit enter to cancel searched highlight
 noremap <CR> :nohlsearch<CR>
-noremap <F2> :NERDTreeToggle<CR>
+
+" HIT F2 toggle NERDTREE
+nnoremap <silent> <F2> :NERDTreeToggle<CR><CR>k
 
 " select ALL
 map <C-A> ggVG
 
+inoremap ;; <ESC>$i<RIGHT>;
