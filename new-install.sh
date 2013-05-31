@@ -1,3 +1,3 @@
-git submodules init
-git submodules update
+git submodule init
+git submodule update
 
