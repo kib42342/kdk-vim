@@ -12,13 +12,26 @@ filetype plugin indent on
 call pathogen#infect()
 call pathogen#helptags()
 
+set hlsearch
 " hit enter to cancel searched highlight
 noremap <CR> :nohlsearch<CR>
 
 " HIT F2 toggle NERDTREE
 nnoremap <silent> <F2> :NERDTreeToggle<CR><CR>k
 
+" HIT \s on the word to replace the word
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+
+" 
+" nnoremap <expr> <F8> ':%s/\<'.expand('<cword>').'\>/<&>/g<CR>' 
+
 " select ALL
 map <C-A> ggVG
 
 inoremap ;; <ESC>$i<RIGHT>;
+inoremap <C-A> <ESC>ggVG
+
+set keywordprg=ydict
+set cursorline
+set nu
+set laststatus=2
