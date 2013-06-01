@@ -5,6 +5,7 @@
 " http://blog.eddie.com.tw
 " eddie@digik.com.tw
 
+" global setting
 runtime .vim/autoload/pathogen.vim
 filetype off
 call pathogen#runtime_append_all_bundles()
@@ -12,8 +13,25 @@ filetype plugin indent on
 call pathogen#infect()
 call pathogen#helptags()
 
+" 為搜尋到的字加上高亮標示
 set hlsearch
-" hit enter to cancel searched highlight
+
+" 縮排
+" Turn on auto-indent
+"       :set autoindent 
+" Turn on intelligent auto-indent
+"       :set smartindent 
+" Defines 4 spaces as indent size
+"       :set shiftwidth=4 
+" hitctrl-t, ctrl-d Indent/un-indent in insert mode
+" Indent
+" >>
+" Un-indent 
+" << 
+set smartindent
+
+
+" hit enter to cancel searched highlight 按《ENTER》取消高亮標示
 noremap <CR> :nohlsearch<CR>
 
 " HIT F2 toggle NERDTREE
@@ -22,20 +40,80 @@ nnoremap <silent> <F2> :NERDTreeToggle<CR><CR>k
 " HIT \s on the word to replace the word
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
-" 
-" nnoremap <expr> <F8> ':%s/\<'.expand('<cword>').'\>/<&>/g<CR>' 
+" 按F8為光標所的字進行全頁搜尋，並加上《》包圍該字
+nnoremap <expr> <F8> ':%s/\<'.expand('<cword>').'\>/<&>/g<CR>' 
 
 " select ALL
 map <C-A> ggVG
 
+" 按兩下; 進入行尾並以；結束
 inoremap ;; <ESC>$i<RIGHT>;
+
+" Insert mode 打 CTRL＋a 文件全選
 inoremap <C-A> <ESC>ggVG
 
-set keywordprg=ydict
+" yahoo線上字典
+" (Project link) http://code.google.com/p/ydict/
+" normal mode 打K（大寫）或CTRL+k
+" Insert mode CTRL+k 
+set keywordprg=~/.vim/ydict
+inoremap <C-K> <ESC>K
+map <C-K> K
+
+" 為當前光標所在之行加入底線加強提示
 set cursorline
+
+" 顯示行數
 set nu
+
+" 顯示狀態列
 set laststatus=2
 
 
+" <<<折疊代碼>>>
+" 設定參數：
+" manual //手工定義
+" indent //用縮進表示
+" expr //用表達式
+" syntax //用語法高亮
+" diff //對沒有更改的文本進行折疊
+" marker //用標志折疊
+"
+" 折疊處輸入命令說明：
+" zc 折疊
+" zC 對所在范圍內所有嵌套的折疊點進行折疊
+" zo 展開折疊
+" zO 對所在范圍內所有嵌套的折疊點進行展開
+" [z 到當前打開的折疊的開始處
+" ]z 到當前打開的折疊的末尾處
+" zj 向下移動．到達下一個折疊的開始處．關閉的折疊也被計入
+" zk 向上移動．到前一折疊處．關閉的折疊也被計入
+"
+" marker 折疊方式說明：
+" default marker is {{{ 和 }}}
+" zf 創建折疊，
+"    zf56G ，建立當前行起到56行的代碼折疊
+"    10zf 10zf+ 10zfj ，建立當前行起到後10行的代碼折疊
+"    10zf- zf10k ，建立當前行起到之前10行的代碼折疊
+"    在括號處 zf% ，建立當前行起到對應的匹配的括號上去（ (),{},[],<>等 ）
+" zd 刪除在光標下的折疊．ONLY FOR "foldmethod" set "manual" OR "marker"
+" zD 循環刪除在光標下的折疊，嵌套刪除折疊．ONLY FOR "foldmethod" set "manual" OR "marker"
+" zE 除去窗口裡"所有"的折疊．ONLY FOR "foldmethod" set "manual" OR "marker"
+set foldmethod=manual
+"set foldmethod=indent
+"set foldmethod=expr
+"set foldmethod=syntax
+"set foldmethod=diff
+"set foldmethod=marker
 
+" 使用模板
+" 新增模版以副檔案為檔名置於templates資料夾中
+au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
 
+" 其他常用指令介紹
+" <normal mode>
+"    u : undo , back to last change
+"    U : undo , not actually a true undo , it back to last change and create a new step
+"    CTRL+R : redo a previously undone change
+"    . : repeat a previous change
+"
