@@ -117,4 +117,4 @@ au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
 "    U : undo , not actually a true undo , it back to last change and create a new step
 "    CTRL+R : redo a previously undone change
 "    . : repeat a previous change
-"
+"    
