@@ -119,18 +119,19 @@ au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
 "    . : repeat a previous change
 "    
 
+" 修正zencoding 在純TERMINAL介面無法使用CTRL+y+,的功能，改使用CTRL+E
   let g:user_zen_settings = {
-    \  'indentation' : '  ',
-    \  'perl' : {
-    \    'aliases' : {
-    \      'req' : 'require '
-    \    },
-    \    'snippets' : {
-    \      'use' : "use strict\nuse warnings\n\n",
-    \      'warn' : "warn \"|\";",
-    \    }
-    \  }
-    \}
+			  \   'indentation' : '  ',
+   			  \   'perl' : {
+   			  \     'aliases' : {
+   			  \       'req' : 'require '
+   			  \     },
+   			  \     'snippets' : {
+   			  \       'use' : "use strict\nuse warnings\n\n",
+   			  \       'warn' : "warn \"|\";",
+   			  \     }
+   			  \   }
+   			  \ }
   
   let g:user_zen_expandabbr_key = '<c-e>'
   let g:use_zen_complete_tag = 1
