@@ -117,7 +117,18 @@ au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
 "    U : undo , not actually a true undo , it back to last change and create a new step
 "    CTRL+R : redo a previously undone change
 "    . : repeat a previous change
-"    
+"    <C-U> 向上翻半頁
+"    <C-D> 向下翻半頁
+"    <C-B> 回上一頁
+"    <C-F> 至下一頁
+"    z. : 光標所在行置中
+"    zt : 光標所在行置頂
+"    zb : 光標所在行置底
+"    shift+h : 光標移至本頁頁頂
+"    shift+m : 光標移至本頁頁中
+"    shift+l : 光標移至本頁頁底
+"
+
 
 " 修正zencoding 在純TERMINAL介面無法使用CTRL+y+,的功能，改使用CTRL+E
   let g:user_zen_settings = {
@@ -136,3 +147,35 @@ au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
   let g:user_zen_expandabbr_key = '<c-e>'
   let g:use_zen_complete_tag = 1
 
+" 光標移動模式切換 <F5>
+" When ON(normal mode):
+" u : 光標向上移動半頁
+" d : 光標向下移動半頁
+" k : 光標所在行向上移動
+" j : 光標所在行向下移動
+  function! LessMode()
+	  if g:lessmode == 0
+		  let g:lessmode = 1
+		  let onoff = 'on'
+		  " Scroll half a page down
+		  noremap <script> d <C-D>
+		  " Scroll one line down
+		  noremap <script> j <C-E>
+		  " Scroll half a page up
+		  noremap <script> u <C-U>
+		  " Scroll one line up
+		  noremap <script> k <C-Y>
+	  else
+		  let g:lessmode = 0
+		  let onoff = 'off'
+		  unmap d
+		  unmap j
+		  unmap u
+		  unmap k
+	  endif
+	  echohl Label | echo "Less mode" onoff | echoh1 None
+  endfunction
+  let g:lessmode=0
+  nnoremap <F5> :call LessMode()<CR>
+  inoremap <F5> <Esc>:call LessMode()<CR>
+  
