@@ -118,3 +118,20 @@ au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
 "    CTRL+R : redo a previously undone change
 "    . : repeat a previous change
 "    
+
+  let g:user_zen_settings = {
+    \  'indentation' : '  ',
+    \  'perl' : {
+    \    'aliases' : {
+    \      'req' : 'require '
+    \    },
+    \    'snippets' : {
+    \      'use' : "use strict\nuse warnings\n\n",
+    \      'warn' : "warn \"|\";",
+    \    }
+    \  }
+    \}
+  
+  let g:user_zen_expandabbr_key = '<c-e>'
+  let g:use_zen_complete_tag = 1
+
