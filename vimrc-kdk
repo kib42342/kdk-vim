@@ -127,7 +127,90 @@ au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
 "    shift+h : 光標移至本頁頁頂
 "    shift+m : 光標移至本頁頁中
 "    shift+l : 光標移至本頁頁底
+" 
+" <input mode>
+" zencoding使用
+" ex1: html:xss>div#header+div#container>ul>li.class{<ctrl+y+,> OR <CTRL+E>}
+" ex2: 
+" ----------------------
+"      test1
+"      test2
+"      test3
+" ----------------------
+"      在normal
+"      mode中使用SHIFT＋V選取三行，按《CTRL＋Y＋,》或《CTRL＋E》在命令欄輸入
+"      ul>li*<enter>
+"      即可變成
+" ----------------------
+"      <ul>
+"        <li>test1</li>
+"        <li>test2</li>
+"        <li>test3</li>
+"      </ul>
+" ----------------------
+" ex3:標籤內選擇<CTRL+y>d
+" ex4:標籤外選擇<CTRL+y>D
+" ex5:轉到下一個編輯點<CTRL+Y>n
+" ex6:轉到上一個編輯點<CTRL+Y>N
+" ex7:更新IMG TAG圖片的大小（圖必須在本地VIM能讀得到的地方）{<CTRY+Y>i}
+" ----------------------
+"     <img src="foo.png">光標移到IMG TAG然後按<CTRY+Y>i
+"     <img src="foo.png" height="48" width="32">
+" 
+" ex8:多行合併，光標選擇要合併的行數後按《SHIFT＋J》即可合為一行
 "
+" ex9:刪除標籤{<c-y>k}：
+" ----------------------
+"      <div class="foo">
+"      <a>光標在這</a>
+"      </div>
+"      按下 <c-y>k 就變成
+"      <div class="foo"></div>
+" ----------------------
+"
+"  ex10:分割組合標籤{<c-y>j}
+" ----------------------
+"      <div class="foo">
+"      <a>光標在這</a>
+"      </div>
+"      按下 <c-y>j 就變成
+"      <div class="foo"/>
+"      再按下 <c-y>j 就變成
+"      <div class="foo"></div>
+" ----------------------
+"       
+" ex11:注解{<CTRY+Y>/}
+" ----------------------
+"      <div>
+"        hello world
+"      </div>
+"     光標移至此塊代碼，按<CTRY+Y>/
+"      <!--<div>
+"        hello world
+"      </div>-->
+" ----------------------
+"
+" ex12:自動給網址加上連結（LINK）的TAG{<CTRL+Y>a}
+"      不支援BIG5<title>
+" ----------------------
+"     光標移動到網址上http://tw.yahoo.com按下<ctrl+y>a
+"     <a href="http://tw.yahoo.com">Yahoo!奇摩</a>
+" ----------------------
+"
+" ex13:給網址添加注解文本{<ctrl+y><shift+a>}
+" ----------------------
+"     光標移動到網址上http://github.com按下<ctrl+y><shift+a>
+"     <blockquote class="quote">
+"          <a href="http://github.com/">Secure source code hosting and
+"          collaborative development - GitHub</a>
+"           How does it work? Get up and running in seconds by forking a
+"           project, pushing an existing repository...
+"           <cite>http://github.com/</cite>
+"     </blockquote>"
+" ----------------------
+"     
+"
+
 
 
 " 修正zencoding 在純TERMINAL介面無法使用CTRL+y+,的功能，改使用CTRL+E
@@ -179,3 +262,48 @@ au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
   nnoremap <F5> :call LessMode()<CR>
   inoremap <F5> <Esc>:call LessMode()<CR>
   
+" 按《TAB》自動補上關鍵字或FUNCTION
+"function! Smart_TabComplete()
+"	let line = getline('.')                         " current line
+"
+"	let substr = strpart(line, -1, col('.')+1)      " from the start of the	current
+"	" line to one character right
+"	" of the cursor
+"	let substr = matchstr(substr,"[^\t]*$")	"word till cursor
+"	if (strlen(substr)==0)	"nothing to match on empty string
+"		return	"\<tab>"
+"	endif
+"	let has_period = match(substr,'\.')!=-1	"position of period,if any
+"	let has_slash = match(substr,'\/')!=-1	"position of slash, if any
+"	if (!has_period	&& !has_slash)
+"		return	"\<C-X>\<C-P>"	"existing text	matching
+"	elseif (has_slash)
+"		return	"\<C-X>\<C-F>"	"file matching
+"	else
+"		return	"\<C-X>\<C-O>"	"plugin	matching
+"	endif
+"endfunction
+"  inoremap <tab> <c-r>=Smart_TabComplete()<CR>
+" set omnifunc=syntaxcomplete#Complete
+" function! CleverTab()
+" 	if pumvisible() 
+" 		return "\<C-N>"
+" 	endif
+" 	if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+" 		return "\<Tab>"
+" 	elseif exists('&omnifunc') && &omnifunc != ''
+" 		return "\<C-X>\<C-O>"
+" 	else
+" 		return "\<C-N>"
+" 	endif
+" endfunction
+" 
+" inoremap <Tab> <C-R>=CleverTab()<CR>
+inoremap <Tab><Tab> <C-X><C-o>
+
+"inoremap <CR><CR> <ESC>o
+
+" Ctags : 安裝"sudo apt-get install ctags"
+" 生成tags文件,在源代碼的根目錄打入"ctags -R"
+set tags=tags
+set autochdir
