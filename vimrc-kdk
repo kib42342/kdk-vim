@@ -4,9 +4,9 @@
 " Francis
 " kib42342@mail.tcu.edu.tw
 
-	  
 
 " global setting
+set background="dark"
 runtime .vim/autoload/pathogen.vim
 filetype off
 call pathogen#runtime_append_all_bundles()
@@ -16,6 +16,8 @@ call pathogen#helptags()
 
 " 為搜尋到的字加上高亮標示
 set hlsearch
+set ignorecase
+set incsearch
 
 " 縮排
 " Turn on auto-indent
@@ -305,5 +307,11 @@ inoremap <Tab><Tab> <C-X><C-o>
 
 " Ctags : 安裝"sudo apt-get install ctags"
 " 生成tags文件,在源代碼的根目錄打入"ctags -R"
-set tags=tags
+" 源碼閱讀切換，打開任意源碼文件，<ctrl+]>即可跳至定義處
+" <CTRL+t> 即可跳回原文件
+set tags=tags;
 set autochdir
+
+" 啟用隨打自動補全功能
+let g:neocomplcache_enable_at_startup=1
+let g:neocomplcache_auto_completion_start_length=0
