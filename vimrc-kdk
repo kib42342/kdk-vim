@@ -7,10 +7,10 @@
 
 " global setting
 set background="dark"
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+" set softtabstop=4
+" set tabstop=4
+" set shiftwidth=4
+" set expandtab
 
 runtime .vim/autoload/pathogen.vim
 filetype off
@@ -216,6 +216,9 @@ au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
 "     </blockquote>"
 " ----------------------
 "     
+" ex14:以BINARY MODE開啟檔案
+"     :%!xxd      以二進制模式開啟
+"     :%!xxd -r   返回原檔案模式
 "
 
 
@@ -290,23 +293,23 @@ au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
 "		return	"\<C-X>\<C-O>"	"plugin	matching
 "	endif
 "endfunction
-"  inoremap <tab> <c-r>=Smart_TabComplete()<CR>
+" inoremap <tab> <c-r>=Smart_TabComplete()<CR>
 " set omnifunc=syntaxcomplete#Complete
-" function! CleverTab()
-" 	if pumvisible() 
-" 		return "\<C-N>"
-" 	endif
-" 	if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
-" 		return "\<Tab>"
-" 	elseif exists('&omnifunc') && &omnifunc != ''
-" 		return "\<C-X>\<C-O>"
-" 	else
-" 		return "\<C-N>"
-" 	endif
-" endfunction
-" 
-" inoremap <Tab> <C-R>=CleverTab()<CR>
-inoremap <Tab><Tab> <C-X><C-o>
+ function! CleverTab()
+ 	if pumvisible() 
+ 		return "\<C-N>"
+ 	endif
+ 	if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+ 		return "\<Tab>"
+ 	elseif exists('&omnifunc') && &omnifunc != ''
+ 		return "\<C-X>\<C-O>"
+ 	else
+ 		return "\<C-N>"
+ 	endif
+ endfunction
+ 
+ inoremap <Tab> <C-R>=CleverTab()<CR>
+ inoremap <Tab><Tab> <C-X><C-o>
 
 "inoremap <CR><CR> <ESC>o
 
@@ -319,4 +322,4 @@ set autochdir
 
 " 啟用隨打自動補全功能
 let g:neocomplcache_enable_at_startup=1
-let g:neocomplcache_auto_completion_start_length=0
+let g:neocomplcache_auto_completion_start_length=2
