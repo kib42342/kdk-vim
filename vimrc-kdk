@@ -11,7 +11,7 @@
 " set shiftwidth=4
 " set expandtab
 source ~/.vim/colorscheme.vim
-runtime ~/.vim/autoload/pathogen.vim
+runtime ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
 filetype off
 call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
@@ -223,7 +223,7 @@ au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
 
 
 " 修正zencoding 在純TERMINAL介面無法使用CTRL+y+,的功能，改使用CTRL+E
-  let g:user_zen_settings = {
+  let g:user_emmet_settings = {
 			  \   'indentation' : '  ',
    			  \   'perl' : {
    			  \     'aliases' : {
@@ -236,8 +236,9 @@ au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
    			  \   }
    			  \ }
   
-  let g:user_zen_expandabbr_key = '<c-e>'
-  let g:use_zen_complete_tag = 1
+  let g:user_emmet_expandabbr_key = '<C-E>'
+  let g:use_emmet_complete_tag = 1
+
 
 " 光標移動模式切換 <F5>
 " When ON(normal mode):
@@ -325,6 +326,6 @@ let g:neocomplcache_auto_completion_start_length=2
 " For input-saving, this variable controls whether you can  choose a candidate
 " with a alphabet or number displayed beside a candidate after '-'.  When you
 " input 'ho-a',  neocomplcache will select candidate 'a'
-imap <expr> -  pumvisible() ? 
-    \ "\<Plug>(neocomplcache_start_unite_quick_match)" : '-' 
+" imap <expr> -  pumvisible() ? 
+"     \ "\<Plug>(neocomplcache_start_unite_quick_match)" : '-' 
 
