@@ -30,3 +30,6 @@ set ttyfast
 set notimeout
 set ttimeout
 set ttimeoutlen=10
+" click "K" show dictionary
+set keywordprg=ydict
+
