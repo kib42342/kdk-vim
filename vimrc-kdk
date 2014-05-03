@@ -10,7 +10,12 @@
 " set tabstop=4
 " set shiftwidth=4
 " set expandtab
-source ~/.vim/colorscheme.vim
+set t_Co=256
+"colorscheme elda
+"colorscheme apprentice
+"colorscheme cduan
+colorscheme nerv-ous
+"colorscheme SlateDark
 runtime ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
 filetype off
 call pathogen#runtime_append_all_bundles()
