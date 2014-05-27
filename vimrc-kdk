@@ -11,6 +11,11 @@
 " set shiftwidth=4
 " set expandtab
 
+" traditonal chinese fileencoding
+set fileencodings=utf-8,ucs-bom,big5,cp950 
+set termencoding=utf-8
+set encoding=utf-8
+
 set t_Co=256
 "colorscheme elda
 "colorscheme apprentice
