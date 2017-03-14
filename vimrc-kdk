@@ -79,7 +79,7 @@ inoremap <C-A> <ESC>ggVG
 "inoremap <C-K> <ESC>K
 "map <C-K> K
 
-" sdcv字典
+" sdcv字典 按K會自動用sdcv查詢資料
 set keywordprg=sdcv
 
 
