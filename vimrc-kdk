@@ -71,13 +71,17 @@ inoremap ;; <ESC>$i<RIGHT>;
 " Insert mode 打 CTRL＋a 文件全選
 inoremap <C-A> <ESC>ggVG
 
-" yahoo線上字典
+" yahoo線上字典(已無法使用）
 " (Project link) http://code.google.com/p/ydict/
 " normal mode 打K（大寫）或CTRL+k
 " Insert mode CTRL+k 
-set keywordprg=~/.vim/ydict
-inoremap <C-K> <ESC>K
-map <C-K> K
+"set keywordprg=~/.vim/ydict
+"inoremap <C-K> <ESC>K
+"map <C-K> K
+
+" sdcv字典
+set keywordprg=sdcv
+
 
 " 為當前光標所在之行加入底線加強提示
 set cursorline
