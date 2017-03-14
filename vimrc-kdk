@@ -80,7 +80,7 @@ inoremap <C-A> <ESC>ggVG
 "map <C-K> K
 
 " sdcv字典 按K會自動用sdcv查詢資料
-set keywordprg=sdcv
+set keywordprg=sdcv\ -u\ 懶蟲簡明英漢詞典
 
 
 " 為當前光標所在之行加入底線加強提示

@@ -74,6 +74,6 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 #alias sdcv='sdcv -u 朗道英漢字典5.0'
-alias sdcv='sdcv -u 懶蟲簡明英漢詞典'
+#alias sdcv='sdcv -u 懶蟲簡明英漢詞典'
 
 
