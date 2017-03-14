@@ -21,7 +21,8 @@ set t_Co=256
 "colorscheme apprentice
 "colorscheme cduan
 "colorscheme nerv-ous
-colorscheme SlateDark
+"colorscheme SlateDark
+colorscheme xoria256
 runtime ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
 filetype off
 call pathogen#runtime_append_all_bundles()
