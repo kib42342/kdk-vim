@@ -72,6 +72,12 @@ alias l='ls -CF'
 #if [ -f /opt/local/etc/bash_completion ]; then
 #    . /opt/local/etc/bash_completion
 #fi
+if [ "$(uname)" == "Darwin" ]; then
+	if [ -f $(brew --prefix)/etc/bash_completion ]; then
+		. $(brew --prefix)/etc/bash_completion
+	fi
+fi
+
 if [ -f /opt/local/share/git-core/git-prompt.sh ]; then
     . /opt/local/share/git-core/git-prompt.sh
 fi
