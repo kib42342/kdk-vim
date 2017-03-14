@@ -3,6 +3,7 @@ git submodule update
 #ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null
 brew install sdcv 
 brew install bash-completion
+pip install powerline-status
 cd .. && ln -sF kdk-vim .vim 
 ln -sf kdk-vim/vimrc-kdk .vimrc  
 ln -sf kdk-vim/bashrc-mac .bashrc 

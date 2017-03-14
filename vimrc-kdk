@@ -15,14 +15,26 @@
 set fileencodings=utf-8,ucs-bom,big5,cp950 
 set termencoding=utf-8
 set encoding=utf-8
+set confirm
+set showcmd
+
+
+
+" swap files out of the project root
+set backupdir=~/vim/backup//
+set directory=~/vim/swap//
+
+" run phpunit tests
+map <leader>t :!phpunit %<cr>
+
 
 set t_Co=256
 "colorscheme elda
 "colorscheme apprentice
 "colorscheme cduan
 "colorscheme nerv-ous
-"colorscheme SlateDark
-colorscheme xoria256
+colorscheme SlateDark
+"colorscheme xoria256
 runtime ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
 filetype off
 call pathogen#runtime_append_all_bundles()
@@ -34,6 +46,17 @@ call pathogen#helptags()
 set hlsearch
 set ignorecase
 set incsearch
+" powerline 
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+set nocompatible
+let g:minBufExplForceSyntaxEnable = 1
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+set guifont=Source\ Code\ Pro\ for\ Powerline:h12 
+set noshowmode
+" powerline (fancy thingy at bottom stuff)
+let g:Powerline_symbols = 'fancy'
 
 " 縮排
 " Turn on auto-indent
@@ -52,6 +75,7 @@ set smartindent
 
 " hit enter to cancel searched highlight 按《ENTER》取消高亮標示
 noremap <CR> :nohlsearch<CR>
+highlight Search cterm=underline
 
 " HIT F2 toggle NERDTREE
 nnoremap <silent> <F2> :NERDTreeToggle<CR><CR>k
@@ -267,12 +291,12 @@ au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
   let g:airline#extensions#tabline#left_sep = ' '
   let g:airline#extensions#tabline#left_alt_sep = ' | '
   let g:airline#extensions#tabline#buffer_nr_show = 1
-  "let g:airline_powerline_fonts = 1
   "let g:airline_theme = 'molokai'
   "let g:airline_theme = 'base16'
-  "let g:airline_theme = 'distinguished'
-  let g:airline_theme = 'wombat'
-"set confirm
+  let g:airline_theme = 'distinguished'
+  "let g:airline_theme = 'wombat'
+  let g:airline_powerline_fonts = 1
+  set guifont=Literation_Mono_Powerline:h16
 
 " Mappings to access buffers (don't use "\p" because a
 " delay before pressing "p" would accidentally paste).
@@ -404,4 +428,28 @@ let g:neocomplcache_auto_completion_start_length=2
 " input 'ho-a',  neocomplcache will select candidate 'a'
 " imap <expr> -  pumvisible() ? 
 "     \ "\<Plug>(neocomplcache_start_unite_quick_match)" : '-' 
+
+" fast saves
+nmap <leader>w :w!<cr>
+
+" easy escaping to normal mode
+imap jj <esc>
+
+" Auto change directory to match current file ,cd
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+
+" easier window navigation
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+" Load the current buffer in Chrome
+nmap ,c :!open -a Google\ Chrome<cr> 
+" Load the current buffer in firefox
+nmap ,f :!open -a firefox<cr> 
+
+" easy motion stuff
+let g:EasyMotion_leader_key = '<Leader>'
+
 
