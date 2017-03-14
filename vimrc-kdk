@@ -251,6 +251,26 @@ au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
   let g:user_emmet_expandabbr_key = '<C-E>'
   let g:use_emmet_complete_tag = 1
 
+  " airline 
+  " :bn 跳下一個buffer
+  " :bp 跳上一個buffer
+  " :b n 跳行第n個buffer
+  " :bd 關掉目前buffer
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#left_sep = ' '
+  let g:airline#extensions#tabline#left_alt_sep = ' | '
+  let g:airline#extensions#tabline#buffer_nr_show = 1
+  "let g:airline_powerline_fonts = 1
+  "let g:airline_theme = 'molokai'
+  "let g:airline_theme = 'base16'
+  "let g:airline_theme = 'distinguished'
+  let g:airline_theme = 'wombat'
+
+  if !exists('g:airline_symbols')
+	    let g:airline_symbols = {}
+    endif
+    let g:airline_symbols.space = "\ua0"
+
 
 " 光標移動模式切換 <F5>
 " When ON(normal mode):
