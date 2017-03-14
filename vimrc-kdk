@@ -7,7 +7,7 @@
 
 " global setting
 " set softtabstop=4
-" set tabstop=4
+"set tabstop=4
 " set shiftwidth=4
 " set expandtab
 
@@ -17,7 +17,7 @@ set termencoding=utf-8
 set encoding=utf-8
 set confirm
 set showcmd
-
+let mapleader = ","
 
 
 " swap files out of the project root
@@ -293,8 +293,8 @@ au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
   let g:airline#extensions#tabline#buffer_nr_show = 1
   "let g:airline_theme = 'molokai'
   "let g:airline_theme = 'base16'
-  let g:airline_theme = 'distinguished'
-  "let g:airline_theme = 'wombat'
+  "let g:airline_theme = 'distinguished'
+  let g:airline_theme = 'wombat'
   let g:airline_powerline_fonts = 1
   set guifont=Literation_Mono_Powerline:h16
 
@@ -450,6 +450,14 @@ nmap ,c :!open -a Google\ Chrome<cr>
 nmap ,f :!open -a firefox<cr> 
 
 " easy motion stuff
-let g:EasyMotion_leader_key = '<Leader>'
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_leader_key = '<Leader><Leader>'
+"let g:EasyMotion_startofline = 0 "keep cursor colum when JK motion
+map <Leader><Leader> <Plug>(easymotion-prefix)
+map <Leader><Leader>h <Plug>(easymotion-linebackward)
+map <Leader><Leader>j <Plug>(easymotion-j)
+map <Leader><Leader>k <Plug>(easymotion-k)
+map <Leader><Leader>l <Plug>(easymotion-lineforward)
+map <Leader><Leader>. <Plug>(easymotion-repeat)
 
 
