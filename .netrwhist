@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/francis/GIT/kdk-vim/bundle/zencoding-vim'
 let g:netrw_dirhist_2='/home/francis/kdk-vim/bundle'
 let g:netrw_dirhist_3='/home/francis/kdk-vim/templates'
 let g:netrw_dirhist_4='/home/francis/kdk-vim/bundle/zencoding-vim/autoload/zencoding'
 let g:netrw_dirhist_5='/home/francis/kdk-vim/vimrc-example'
+let g:netrw_dirhist_6='/Users/kib42342/kdk-vim'
