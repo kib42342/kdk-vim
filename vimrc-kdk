@@ -70,7 +70,7 @@ highlight Search cterm=underline
 " HIT F2 toggle NERDTREE
 nnoremap <silent> <F2> :NERDTreeToggle<CR><CR>k
 
-" HIT \s on the word to replace the word
+" HIT ,s on the word to replace the word
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 " 按F8為光標所的字進行全頁搜尋，並加上《》包圍該字
