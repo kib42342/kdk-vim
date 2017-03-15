@@ -76,8 +76,8 @@ alias l='ls -CF'
 #alias sdcv='sdcv -u 朗道英漢字典5.0'
 #alias sdcv='sdcv -u 懶蟲簡明英漢詞典'
 
-#POWERLINE_SCRIPT=/usr/share/powerline/bindings/bash/powerline.sh
-#if [ -f $POWERLINE_SCRIPT ]; then 
-#	source $POWERLINE_SCRIPT
-#fi
+POWERLINE_SCRIPT=/usr/share/powerline/bindings/bash/powerline.sh
+if [ -f $POWERLINE_SCRIPT ]; then 
+	source $POWERLINE_SCRIPT
+fi
 
