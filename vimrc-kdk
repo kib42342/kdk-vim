@@ -305,6 +305,7 @@ au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
 " \1 \2 \3 : go to buffer 1/2/3 etc
 nnoremap <Leader>l :ls<CR>
 nnoremap <Leader>b :bp<CR>
+nnoremap <Leader>d :bd<CR>
 nnoremap <Leader>f :bn<CR>
 nnoremap <Leader>g :e#<CR>
 nnoremap <Leader>1 :1b<CR>
@@ -427,9 +428,7 @@ let g:neocomplcache_auto_completion_start_length=2
 " with a alphabet or number displayed beside a candidate after '-'.  When you
 " input 'ho-a',  neocomplcache will select candidate 'a'
 " imap <expr> -  pumvisible() ? 
-"     \ "\<Plug>(neocomplcache_start_unite_quick_match)" : '-' 
-
-" fast saves
+" fast saves ,w
 nmap <leader>w :w!<cr>
 
 " easy escaping to normal mode
@@ -451,7 +450,7 @@ nmap ,f :!open -a firefox<cr>
 
 " easy motion stuff
 let g:EasyMotion_smartcase = 1
-let g:EasyMotion_leader_key = '<Leader><Leader>'
+let g:EasyMotion_leader_key = '<Leader>'
 "let g:EasyMotion_startofline = 0 "keep cursor colum when JK motion
 map <Leader><Leader> <Plug>(easymotion-prefix)
 map <Leader><Leader>h <Plug>(easymotion-linebackward)
