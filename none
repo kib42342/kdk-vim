@@ -15,9 +15,11 @@
 
 # Command Line History (newest to oldest):
 :q
-|2,0,1587767371,,"q"
+|2,0,1587768691,,"q"
 
 # Search String History (newest to oldest):
+?/leader
+|2,1,1587767555,47,"leader"
 ?/sdcv
 |2,1,1587767364,47,"sdcv"
 
@@ -30,42 +32,246 @@
 # Registers:
 
 # File marks:
-'0  147  1  ~/kdk-vim/.gitmodules
-|4,48,147,1,1587767371,"~/kdk-vim/.gitmodules"
-'1  2  0  ~/kdk-vim/update.sh
-|4,49,2,0,1587767348,"~/kdk-vim/update.sh"
-'2  147  1  ~/kdk-vim/.gitmodules
-|4,50,147,1,1575339116,"~/kdk-vim/.gitmodules"
+'0  1  0  ~/kdk-vim/new-install.sh
+|4,48,1,0,1587768691,"~/kdk-vim/new-install.sh"
+'1  8  0  ~/kdk-vim/new-install-mac.sh
+|4,49,8,0,1587768638,"~/kdk-vim/new-install-mac.sh"
+'2  83  0  ~/kdk-vim/bashrc
+|4,50,83,0,1587768104,"~/kdk-vim/bashrc"
+'3  35  0  ~/kdk-vim/vimrc
+|4,51,35,0,1587767565,"~/kdk-vim/vimrc"
+'4  523  0  ~/kdk-vim/vimrc-kdk
+|4,52,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+'5  147  1  ~/kdk-vim/.gitmodules
+|4,53,147,1,1587767371,"~/kdk-vim/.gitmodules"
+'6  2  0  ~/kdk-vim/update.sh
+|4,54,2,0,1587767348,"~/kdk-vim/update.sh"
+'7  147  1  ~/kdk-vim/.gitmodules
+|4,55,147,1,1575339116,"~/kdk-vim/.gitmodules"
 
 # Jumplist (newest first):
--'  147  1  ~/kdk-vim/.gitmodules
-|4,39,147,1,1587767371,"~/kdk-vim/.gitmodules"
--'  1  0  ~/kdk-vim/.gitmodules
-|4,39,1,0,1587767368,"~/kdk-vim/.gitmodules"
--'  2  0  ~/kdk-vim/update.sh
-|4,39,2,0,1587767348,"~/kdk-vim/update.sh"
--'  2  0  ~/kdk-vim/update.sh
-|4,39,2,0,1587767348,"~/kdk-vim/update.sh"
--'  1  0  ~/kdk-vim/update.sh
-|4,39,1,0,1587767336,"~/kdk-vim/update.sh"
--'  1  0  ~/kdk-vim/update.sh
-|4,39,1,0,1587767336,"~/kdk-vim/update.sh"
--'  147  1  ~/kdk-vim/.gitmodules
-|4,39,147,1,1575339116,"~/kdk-vim/.gitmodules"
--'  147  1  ~/kdk-vim/.gitmodules
-|4,39,147,1,1575339116,"~/kdk-vim/.gitmodules"
--'  8  0  ~/kdk-vim/.gitmodules
-|4,39,8,0,1575339114,"~/kdk-vim/.gitmodules"
--'  8  0  ~/kdk-vim/.gitmodules
-|4,39,8,0,1575339114,"~/kdk-vim/.gitmodules"
--'  8  0  ~/kdk-vim/.gitmodules
-|4,39,8,0,1575339114,"~/kdk-vim/.gitmodules"
--'  1  0  ~/kdk-vim/.gitmodules
-|4,39,1,0,1575339109,"~/kdk-vim/.gitmodules"
--'  1  0  ~/kdk-vim/.gitmodules
-|4,39,1,0,1575339109,"~/kdk-vim/.gitmodules"
+-'  1  0  ~/kdk-vim/new-install.sh
+|4,39,1,0,1587768691,"~/kdk-vim/new-install.sh"
+-'  8  0  ~/kdk-vim/new-install-mac.sh
+|4,39,8,0,1587768638,"~/kdk-vim/new-install-mac.sh"
+-'  8  0  ~/kdk-vim/new-install-mac.sh
+|4,39,8,0,1587768638,"~/kdk-vim/new-install-mac.sh"
+-'  1  0  ~/kdk-vim/new-install-mac.sh
+|4,39,1,0,1587768607,"~/kdk-vim/new-install-mac.sh"
+-'  1  0  ~/kdk-vim/new-install-mac.sh
+|4,39,1,0,1587768607,"~/kdk-vim/new-install-mac.sh"
+-'  83  0  ~/kdk-vim/bashrc
+|4,39,83,0,1587768104,"~/kdk-vim/bashrc"
+-'  83  0  ~/kdk-vim/bashrc
+|4,39,83,0,1587768104,"~/kdk-vim/bashrc"
+-'  83  0  ~/kdk-vim/bashrc
+|4,39,83,0,1587768104,"~/kdk-vim/bashrc"
+-'  83  0  ~/kdk-vim/bashrc
+|4,39,83,0,1587768104,"~/kdk-vim/bashrc"
+-'  1  0  ~/kdk-vim/bashrc
+|4,39,1,0,1587768078,"~/kdk-vim/bashrc"
+-'  1  0  ~/kdk-vim/bashrc
+|4,39,1,0,1587768078,"~/kdk-vim/bashrc"
+-'  1  0  ~/kdk-vim/bashrc
+|4,39,1,0,1587768078,"~/kdk-vim/bashrc"
+-'  1  0  ~/kdk-vim/bashrc
+|4,39,1,0,1587768078,"~/kdk-vim/bashrc"
+-'  35  0  ~/kdk-vim/vimrc
+|4,39,35,0,1587767565,"~/kdk-vim/vimrc"
+-'  35  0  ~/kdk-vim/vimrc
+|4,39,35,0,1587767565,"~/kdk-vim/vimrc"
+-'  35  0  ~/kdk-vim/vimrc
+|4,39,35,0,1587767565,"~/kdk-vim/vimrc"
+-'  35  0  ~/kdk-vim/vimrc
+|4,39,35,0,1587767565,"~/kdk-vim/vimrc"
+-'  35  0  ~/kdk-vim/vimrc
+|4,39,35,0,1587767565,"~/kdk-vim/vimrc"
+-'  35  0  ~/kdk-vim/vimrc
+|4,39,35,0,1587767565,"~/kdk-vim/vimrc"
+-'  35  0  ~/kdk-vim/vimrc
+|4,39,35,0,1587767565,"~/kdk-vim/vimrc"
+-'  35  0  ~/kdk-vim/vimrc
+|4,39,35,0,1587767565,"~/kdk-vim/vimrc"
+-'  35  0  ~/kdk-vim/vimrc
+|4,39,35,0,1587767565,"~/kdk-vim/vimrc"
+-'  35  0  ~/kdk-vim/vimrc
+|4,39,35,0,1587767565,"~/kdk-vim/vimrc"
+-'  35  0  ~/kdk-vim/vimrc
+|4,39,35,0,1587767565,"~/kdk-vim/vimrc"
+-'  35  0  ~/kdk-vim/vimrc
+|4,39,35,0,1587767565,"~/kdk-vim/vimrc"
+-'  35  0  ~/kdk-vim/vimrc
+|4,39,35,0,1587767565,"~/kdk-vim/vimrc"
+-'  35  0  ~/kdk-vim/vimrc
+|4,39,35,0,1587767565,"~/kdk-vim/vimrc"
+-'  35  0  ~/kdk-vim/vimrc
+|4,39,35,0,1587767565,"~/kdk-vim/vimrc"
+-'  35  0  ~/kdk-vim/vimrc
+|4,39,35,0,1587767565,"~/kdk-vim/vimrc"
+-'  1  0  ~/kdk-vim/vimrc
+|4,39,1,0,1587767564,"~/kdk-vim/vimrc"
+-'  1  0  ~/kdk-vim/vimrc
+|4,39,1,0,1587767564,"~/kdk-vim/vimrc"
+-'  1  0  ~/kdk-vim/vimrc
+|4,39,1,0,1587767564,"~/kdk-vim/vimrc"
+-'  1  0  ~/kdk-vim/vimrc
+|4,39,1,0,1587767564,"~/kdk-vim/vimrc"
+-'  1  0  ~/kdk-vim/vimrc
+|4,39,1,0,1587767564,"~/kdk-vim/vimrc"
+-'  1  0  ~/kdk-vim/vimrc
+|4,39,1,0,1587767564,"~/kdk-vim/vimrc"
+-'  1  0  ~/kdk-vim/vimrc
+|4,39,1,0,1587767564,"~/kdk-vim/vimrc"
+-'  1  0  ~/kdk-vim/vimrc
+|4,39,1,0,1587767564,"~/kdk-vim/vimrc"
+-'  1  0  ~/kdk-vim/vimrc
+|4,39,1,0,1587767564,"~/kdk-vim/vimrc"
+-'  1  0  ~/kdk-vim/vimrc
+|4,39,1,0,1587767564,"~/kdk-vim/vimrc"
+-'  1  0  ~/kdk-vim/vimrc
+|4,39,1,0,1587767564,"~/kdk-vim/vimrc"
+-'  1  0  ~/kdk-vim/vimrc
+|4,39,1,0,1587767564,"~/kdk-vim/vimrc"
+-'  1  0  ~/kdk-vim/vimrc
+|4,39,1,0,1587767564,"~/kdk-vim/vimrc"
+-'  1  0  ~/kdk-vim/vimrc
+|4,39,1,0,1587767564,"~/kdk-vim/vimrc"
+-'  1  0  ~/kdk-vim/vimrc
+|4,39,1,0,1587767564,"~/kdk-vim/vimrc"
+-'  1  0  ~/kdk-vim/vimrc
+|4,39,1,0,1587767564,"~/kdk-vim/vimrc"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  523  0  ~/kdk-vim/vimrc-kdk
+|4,39,523,0,1587767559,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
+-'  1  0  ~/kdk-vim/vimrc-kdk
+|4,39,1,0,1587767540,"~/kdk-vim/vimrc-kdk"
 
 # History of marks within files (newest to oldest):
+
+> ~/kdk-vim/new-install.sh
+	*	1587768652	0
+	"	1	0
+
+> ~/kdk-vim/new-install-mac.sh
+	*	1587768623	0
+	"	8	0
+
+> ~/kdk-vim/bashrc
+	*	1587768100	0
+	"	83	0
+
+> ~/kdk-vim/vimrc
+	*	1587767564	0
+	"	35	0
+
+> ~/kdk-vim/vimrc-kdk
+	*	1587767558	0
+	"	523	0
 
 > ~/kdk-vim/.gitmodules
 	*	1587767368	0

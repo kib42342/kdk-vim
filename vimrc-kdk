@@ -47,8 +47,8 @@ set t_Co=256
 "colorscheme nerv-ous
 "colorscheme SlateDark
 "colorscheme xoria256
-"colorscheme solarized
-colorscheme torte
+colorscheme solarized
+"colorscheme torte
 runtime ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
 filetype off
 call pathogen#runtime_append_all_bundles()
