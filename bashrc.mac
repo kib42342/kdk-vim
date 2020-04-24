@@ -82,4 +82,4 @@ if [ -f /opt/local/share/git-core/git-prompt.sh ]; then
     . /opt/local/share/git-core/git-prompt.sh
 fi
 
-PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+#PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '

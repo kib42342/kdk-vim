@@ -1,10 +1,7 @@
 " My currently working version Vimrc
 " I kept all other settings in plugins/settings directory
-"
 " Francis
 " kib42342@mail.tcu.edu.tw
-
-
 " global setting
 " set softtabstop=4
 "set tabstop=4
@@ -17,10 +14,24 @@ set termencoding=utf-8
 set encoding=utf-8
 set confirm
 set showcmd
+syntax on
 
 " set leader
 let mapleader = ","
 
+" Unmap the arrow keys
+no <Down> <Nop>
+no <Left> <Nop>
+no <Up> <Nop>
+no <Right> <Nop>
+ino <Down> <Nop>
+ino <Left> <Nop>
+ino <Up> <Nop>
+ino <Right> <Nop>
+vno <Down> <Nop>
+vno <Left> <Nop>
+vno <Up> <Nop>
+vno <Right> <Nop>
 
 " swap files out of the project root
 set backupdir=~/vim/backup//
@@ -33,9 +44,11 @@ set t_Co=256
 "colorscheme elda
 "colorscheme apprentice
 "colorscheme cduan
-colorscheme nerv-ous
+"colorscheme nerv-ous
 "colorscheme SlateDark
 "colorscheme xoria256
+"colorscheme solarized
+colorscheme torte
 runtime ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
 filetype off
 call pathogen#runtime_append_all_bundles()
@@ -46,13 +59,19 @@ call pathogen#helptags()
 " 為搜尋到的字加上高亮標示
 set hlsearch
 set ignorecase
+set smartcase
 set incsearch
+
+" vim 自動換行
+" set wrap
 
 " 縮排
 " Turn on auto-indent
 "       :set autoindent 
 " Turn on intelligent auto-indent
 "       :set smartindent 
+" Turn on intelligent & C auto-indent
+"       :set cindent 
 " Defines 4 spaces as indent size
 "       :set shiftwidth=4 
 " hitctrl-t, ctrl-d Indent/un-indent in insert mode
@@ -60,8 +79,8 @@ set incsearch
 " >>
 " Un-indent 
 " << 
-set smartindent
-
+"set smartindent
+set cindent
 
 " hit enter to cancel searched highlight 按《ENTER》取消高亮標示
 noremap <CR> :nohlsearch<CR>
@@ -102,9 +121,9 @@ set cursorline
 
 " 顯示行數
 set nu
-
+set relativenumber
 " 顯示狀態列
-set laststatus=2
+set laststatus=2"
 
 
 " <<<折疊代碼>>>
@@ -285,9 +304,9 @@ au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
 set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 set nocompatible
 let g:minBufExplForceSyntaxEnable = 1
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
 set guifont=Source\ Code\ Pro\ for\ Powerline:h12 
 set noshowmode
 " powerline (fancy thingy at bottom stuff)
@@ -468,7 +487,7 @@ nmap <leader>w :w!<cr>
 nmap <Leader>q :q!<CR>
 
 " easy escaping to normal mode
-imap jj <esc>
+imap jj <C-[>
 
 " Auto change directory to match current file ,cd
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
@@ -494,7 +513,11 @@ let g:EasyMotion_leader_key = '<Leader>'
 map <Leader><Leader> <Plug>(easymotion-prefix)
 map <Leader><Leader>h <Plug>(easymotion-linebackward)
 map <Leader><Leader>j <Plug>(easymotion-j)
-map <Leader><Lejder>k <Plug>(easymotion-k)
+map <Leader><Leader>k <Plug>(easymotion-k)
 map <Leader><Leader>l <Plug>(easymotion-lineforward)
 map <Leader><Leader>. <Plug>(easymotion-repeat)
 map <Leader><Leader>r :AirlineRefresh<CR>
+imap <Leader><Leader>h <C-[><Plug>(easymotion-linebackward)
+imap <Leader><Leader>j <C-[><Plug>(easymotion-j)
+imap <Leader><Leader>k <C-[><Plug>(easymotion-k)
+imap <Leader><Leader>l <C-[><Plug>(easymotion-lineforward)
